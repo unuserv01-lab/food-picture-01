@@ -1,30 +1,17 @@
-# Nasi Padang di Atas Daun Pisang — food-picture-01
+# food-picture-01 — round 2: "Ridge Line, 6AM — Padang"
 
-Foto makanan hangat sepiring nasi padang lengkap yang disajikan di atas daun
-pisang segar: gundukan nasi putih mengepul, rendang daging berkilau dengan
-kuah santan pekat, paha ayam goreng renyah, telur balado merah, daun singkong
-rebus, sambal, dan kerupuk — difoto dari atas dengan cahaya sore yang hangat
-di atas meja kayu. Menggugah selera, segar, dan terbaca jelas bahkan di
-ukuran kecil.
+One 3-cm rendang cube + one tight rice mound as a single hero, shot plate-level
+(0 degrees, 100mm macro) on a matte black basalt slab. Hard snooted flash rakes
+through a slatted banana leaf, carving shadow stripes; a mirror-thin pool of
+sambal holds a live candle flame's reflection, and a lit steam ribbon crosses
+the frame.
 
-## Gambar
+`main.py` (Python 3.13, stdlib only) validates the bundled photograph
+(`assets/entry.jpg`, 1024x1024 JPEG) against the competition limits (<=1 MiB,
+<=1024x1024) and copies it byte-for-byte to `$MAKEFUN_OUTPUT_DIR/entry.png`,
+so two runs always write identical bytes. RULES.txt allows a JPEG payload
+under the `entry.png` name ("told apart by its first bytes").
 
-- File: `assets/nasi-padang.png`
-- Ukuran: 984.641 byte (di bawah batas 1 MiB)
-- Dimensi: 896 × 598 piksel (di bawah batas 1024 × 1024)
-- Format: PNG
+## Run
 
-## Cara menjalankan
-
-```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
-```
-
-Program menyalin `assets/nasi-padang.png` byte-for-byte ke
-`$MAKEFUN_OUTPUT_DIR/entry.png` (default `/output`), setelah memvalidasi
-ukuran file, magic bytes PNG, dan dimensinya. Deterministik: dua run
-menghasilkan byte yang identik.
-
-## Lisensi
-
-MIT — lihat `LICENSE`.
+    mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
